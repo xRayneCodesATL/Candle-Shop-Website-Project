@@ -1,0 +1,244 @@
+html {
+    font-size: 100%;
+}
+
+body {
+    background-image: url(./assets/images/background.png);
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    color: white;
+    text-align: center;
+    font-family: "Poiret One", sans-serif;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+    font-size: 1.35rem;
+    padding: 5px 10px; /* Add some padding for better hover effect */
+    transition: background-color 0.3s ease;
+}
+
+.nav-bar a:hover {
+    color: #fec2c0; /* Change to your desired hover color */
+    background-color: rgba(255, 255, 255, 0.4);
+    font-weight: 900;
+    border-radius: 8px;
+}
+
+h1 {
+    display: none;
+}
+
+.signature {
+    font-family: "Cedarville Cursive", cursive;
+    font-size: 2.5rem;
+    color:#fec2c0;
+}
+
+p {
+    font-size: 1.3rem;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between; /* Correctly spaced between */
+    align-items: center; /* Aligns items vertically */
+    box-sizing: border-box; /* Include padding in the element's total width/height */
+    opacity: 0; /* Start invisible */
+    animation: fadeIn 2s forwards; /* Apply the fadeIn animation */
+    width: 100%;
+}
+
+.company-img img {
+    padding-top: 1rem;
+    max-width: 100%; /* Make the image responsive */
+
+}
+
+
+.side-icon {
+    display: flex;
+    justify-content: flex-end; /* Optional: Ensures icon is right-aligned */
+}
+
+.about-container {
+    display: flex;
+    align-items: center; /* Align items vertically centered */
+    justify-content: space-between; /* Space items evenly */
+    padding: 1rem;
+    text-align: left;
+    line-height: 1.6; /* Improve readability */
+}
+
+.text-info {
+    flex: 1; /* Take up half of the container */
+    padding-right: 1rem; /* Optional: Add some space between text and logo */
+}
+
+.candle-logo {
+    flex: 1; /* Take up half of the container */
+    display: flex; /* Center the image within its div */
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+}
+
+.candle-logo img {
+    max-width: 65%; /* Ensure the image is responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.candle-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: .85rem;
+    background-color: rgb(53, 53, 53);
+}
+
+.candle-scents {
+    display: contents; /* Allows grid items to be direct children of .candle-grid */
+}
+
+.item {
+    padding: 10px; /* Adjust padding as needed */
+    text-align: center; /* Center images if desired */
+}
+
+.item img {
+    max-width: 100%; /* Ensures images do not exceed the container width */
+    height: auto;    /* Maintains aspect ratio */
+    display: block;  /* Removes bottom space caused by inline images */
+}
+
+.about {
+    display: flex; /* Use flexbox layout */
+    justify-content: space-between; /* Space out items */
+    align-items: center; /* Center items vertically */
+    width: 60%; /* Set width of the container */
+    margin: 0 auto; /* Center the container in the page */
+    padding: 20px; /* Add padding for spacing */
+    text-align: left;
+}
+
+.about-text {
+    flex: 1; /* Allow text to take available space */
+    padding-right: 20px; /* Space between text and image */
+}
+
+.about-image img {
+    max-width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: rounded corners for image */
+}
+
+.about p {
+    margin: 0; /* Remove default margin for better control */
+    line-height: 1.6; /* Improve readability */
+}
+
+.contact a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+    font-size: 1.35rem;
+    padding: 5px 10px; /* Add some padding for better hover effect */
+    transition: background-color 0.3s ease;
+}
+
+.contact a:hover {
+    color: #fec2c0; /* Change to your desired hover color */
+    font-weight: 900;
+    border-radius: 8px;
+}
+
+footer {
+    font-size: .85rem;
+    text-align: left;
+}
+
+
+@media (max-width: 1400px) {
+    .about {
+        display: flex;
+        flex-direction: column; /* Change direction to column */
+        align-items: center; /* Center the items */
+    }
+
+    .about-text,
+    .about-image {
+        width: 100%; /* Make each section full width */
+        text-align: center; /* Optional: Center text for better appearance */
+    }
+
+    .about-image img {
+        max-width: 100%; /* Ensure the image is responsive */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+@media (max-width: 768px) {
+
+    p {
+        font-size: 1rem;
+    }
+    .header {
+        display: flex;
+        justify-content: center; /* Center items on smaller screens */
+        padding: 15px; /* Adjust padding for smaller screens */
+        
+    }
+    .side-icon {
+        display: none;
+    }
+
+    .about-container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .text-info {
+        padding-right: 0; /* Remove padding for better alignment */
+        text-align: center; /* Center the text on smaller screens */
+    }
+
+    .candle-logo {
+        margin-top: 1rem; /* Optional: Add some space above the logo */
+    }
+
+    .candle-grid {
+        grid-template-columns: 1fr; /* Change to a single column */
+    }
+
+    .about {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .about-text {
+        padding-right: 0; /* Remove right padding */
+        padding-bottom: 20px; /* Optional: add space below text */
+    }
+
+    .about-image {
+        width: 100%; /* Ensure image takes full width */
+        text-align: center; /* Center image */
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        display: flex;
+        justify-content: center;
+        flex-direction: column; /* Stack items vertically on very small screens */
+        align-items: center; /* Center items vertically */
+    }
+}
+
+
+@keyframes fadeIn {
+    to {
+        opacity: 1; /* End fully visible */
+    }
+}
